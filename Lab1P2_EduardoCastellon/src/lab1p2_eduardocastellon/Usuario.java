@@ -77,9 +77,28 @@ public class Usuario {
         this.contra = contra;
     }
     
-    public String censurarContra(String contra){
+    public String censurarContra(){
+        String contrac = "";
         
-        return contraC
+        for (int i = 0; i < contrac.length(); i++) {
+            contrac = contrac + "*";
+        }
+        
+        return contrac;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Usuario{");
+        sb.append("nombre=").append(nombre);
+        sb.append(", apellido=").append(apellido);
+        sb.append(", edad=").append(edad);
+        sb.append(", correo=").append(correo);
+        sb.append(", contra=").append(censurarContra());
+        sb.append(", dominio=").append(dominio);
+        sb.append('}');
+        return sb.toString();
     }
     
 }

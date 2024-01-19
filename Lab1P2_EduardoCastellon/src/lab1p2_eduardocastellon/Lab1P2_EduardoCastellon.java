@@ -6,7 +6,10 @@ package lab1p2_eduardocastellon;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -50,6 +53,7 @@ public class Lab1P2_EduardoCastellon {
                     break;
                 }
                 case 2:{
+                    
                     break;
                 }
             }
@@ -59,9 +63,15 @@ public class Lab1P2_EduardoCastellon {
 
     public static String validarContra() {
         Scanner lea = new Scanner(System.in);
+        
+        Pattern simbolos = Pattern.compile("^[-.*_.*&.*$.*%]$");
+        
+        boolean validarContra = true;
+        while(validarContra){
+            
+        }
 
-        System.out.println("Ingrese su contraseña");
-        String contra = lea.nextLine();
+        
 
         return contra;
     }
@@ -111,7 +121,7 @@ public class Lab1P2_EduardoCastellon {
     public static String obtenerDom(String correo) {
         String dom = "";
         String domArr[] = correo.split("@");
-        dom = domArr[2];
+        dom = domArr[1];
         return dom;
     }
 
