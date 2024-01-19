@@ -48,16 +48,92 @@ public class Lab1P2_EduardoCastellon {
                     System.out.println(contra);
                     String correo = validarCorreo();
                     String dom = obtenerDom(correo);
-
                     break;
                 }
                 case 2: {
-
+                    int cont = 1;
+                    for (int i = 0; i < usuarios.size(); i++) {
+                        int num = i + cont;
+                        System.out.println(num + "- " + usuarios.get(i).toString());
+                        cont++;
+                    }
                     break;
+                }
+                case 3: {
+                    boolean buscdom = true;
+                    while (buscdom) {
+                        System.out.println("Ingresar dominio a listar: ");
+                        String dom = lea.nextLine();
+
+                        if (dom.equals("gmail.com")) {
+                            int cont = 1;
+                            for (Usuario persona : usuarios) {
+                                if (dom.equals(persona.getDominio())) {
+                                    System.out.println(cont + "- " + persona.toString());
+                                    cont++;
+                                }
+                            }
+                            buscdom = false;
+                        } else if (dom.equals("Outlook.com")) {
+                            int cont = 1;
+                            for (Usuario persona : usuarios) {
+                                if (dom.equals(persona.getDominio())) {
+                                    System.out.println(cont + "- " + persona.toString());
+                                    cont++;
+                                }
+                            }
+                            buscdom = false;
+                        } else if (dom.equals("Yahoo.com")) {
+                            int cont = 1;
+                            for (Usuario persona : usuarios) {
+                                if (dom.equals(persona.getDominio())) {
+                                    System.out.println(cont + "- " + persona.toString());
+                                    cont++;
+                                }
+                            }
+                            buscdom = false;
+                        } else if (dom.equals("iCloud.com")) {
+                            int cont = 1;
+                            for (Usuario persona : usuarios) {
+                                if (dom.equals(persona.getDominio())) {
+                                    System.out.println(cont + "- " + persona.toString());
+                                    cont++;
+                                }
+                            }
+                            buscdom = false;
+                        } else if (dom.equals("ProtonMail.com")) {
+                            int cont = 1;
+                            for (Usuario persona : usuarios) {
+                                if (dom.equals(persona.getDominio())) {
+                                    System.out.println(cont + "- " + persona.toString());
+                                    cont++;
+                                }
+                            }
+                            buscdom = false;
+                        } else if (dom.equals("FastMail.com")) {
+                            int cont = 1;
+                            for (Usuario persona : usuarios) {
+                                if (dom.equals(persona.getDominio())) {
+                                    System.out.println(cont + "- " + persona.toString());
+                                    cont++;
+                                }
+                            }
+                            buscdom = false;
+                        } else {
+                            System.out.println("Ingrese un dominio valido");
+                            System.out.println("Dominions validos: ");
+                            System.out.println(
+                                    "-gmail \n"
+                                    + "-Outlook \n"
+                                    + "-Yahoo \n"
+                                    + "-iCloud \n"
+                                    + "-PortonMail \n"
+                                    + "-FastMail \n");
+                        }
+                    }
                 }
             }
         }
-
     }
 
     public static String validarContra() {
@@ -134,7 +210,6 @@ public class Lab1P2_EduardoCastellon {
             } else {
                 System.out.println("Ya hay un correo en existencia");
             }
-
         }
         return correo;
     }

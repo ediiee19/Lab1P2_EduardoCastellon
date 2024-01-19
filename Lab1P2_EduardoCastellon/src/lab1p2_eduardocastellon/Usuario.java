@@ -11,15 +11,13 @@ package lab1p2_eduardocastellon;
 public class Usuario {
     private String nombre;
     private String apellido;
-    private int edad;
     private String correo;
     private String contra;
     private String dominio;
 
-    public Usuario(String nombre, String apellido, int edad, String correo, String dominio, String contra) {
+    public Usuario(String nombre, String apellido, String correo, String dominio, String contra) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.edad = edad;
         this.correo = correo;
         this.dominio = dominio;
         this.contra = contra;
@@ -43,14 +41,6 @@ public class Usuario {
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
     }
 
     public String getCorreo() {
@@ -89,16 +79,9 @@ public class Usuario {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Usuario{");
-        sb.append("nombre=").append(nombre);
-        sb.append(", apellido=").append(apellido);
-        sb.append(", edad=").append(edad);
-        sb.append(", correo=").append(correo);
-        sb.append(", contra=").append(censurarContra());
-        sb.append(", dominio=").append(dominio);
-        sb.append('}');
-        return sb.toString();
+        return "Nombre: " + nombre + " " + apellido + " | correo " + correo + " | contraseña: " + contra;
     }
+
+    
     
 }
